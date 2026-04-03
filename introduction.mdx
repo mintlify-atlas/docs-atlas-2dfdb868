@@ -1,0 +1,79 @@
+---
+title: "Introduction"
+description: "A curated collection of high-quality macOS applications and tools, organized by category for easy discovery."
+---
+
+## What is Awesome Mac?
+
+Awesome Mac is a community-maintained list dedicated to collecting high-quality macOS software and organizing it systematically by different categories for easy search and use. As it continues to grow, the project has far exceeded its initial expectations and has become more comprehensive and refined.
+
+The project is part of the broader [awesome](https://github.com/sindresorhus/awesome) ecosystem — a series of community-curated lists covering programming languages, tools, and platforms.
+
+## Project mission
+
+The goal of Awesome Mac is to help macOS users — developers and designers alike — discover the best tools available for their workflows. Every app in the list is evaluated for quality before inclusion, and the community actively maintains the list to keep it accurate and up to date.
+
+<Note>
+  Feel free to **star** and **fork** the [GitHub repository](https://github.com/jaywcjlove/awesome-mac) to support the project.
+</Note>
+
+## Available languages
+
+The list is available in multiple languages to serve a global audience:
+
+<CardGroup cols={2}>
+  <Card title="English" icon="globe" href="https://github.com/jaywcjlove/awesome-mac">
+    The primary list, maintained in English.
+  </Card>
+  <Card title="Chinese (中文)" icon="globe" href="https://github.com/jaywcjlove/awesome-mac/blob/master/README-zh.md">
+    Full Chinese translation of the app list.
+  </Card>
+  <Card title="Japanese (日本語)" icon="globe" href="https://github.com/jaywcjlove/awesome-mac/blob/master/README-ja.md">
+    Full Japanese translation of the app list.
+  </Card>
+  <Card title="Korean (한국어)" icon="globe" href="https://github.com/jaywcjlove/awesome-mac/blob/master/README-ko.md">
+    Full Korean translation of the app list.
+  </Card>
+</CardGroup>
+
+## Available as an npm package
+
+The full app list is published as a JSON data package on npm, making it easy to build tools and integrations on top of the data.
+
+```bash
+npm install awesome-mac
+```
+
+Import the English list or any of the localized versions:
+
+```js
+import appList from 'awesome-mac'
+
+// Localized lists
+import zhList from 'awesome-mac/zh'
+import jaList from 'awesome-mac/ja'
+import koList from 'awesome-mac/ko'
+```
+
+## Browse by category
+
+<CardGroup cols={2}>
+  <Card title="Reading & Writing" icon="pen-nib" href="/apps/reading-writing">
+    Text editors, office suites, markdown editors, note-taking apps, and more.
+  </Card>
+  <Card title="Developer Tools" icon="code" href="/apps/ides-editors">
+    IDEs, developer utilities, version control, databases, and terminal apps.
+  </Card>
+  <Card title="Design & Media" icon="palette" href="/apps/design-tools">
+    Design tools, audio/video editors, screenshot utilities, and screen recording.
+  </Card>
+  <Card title="Productivity & Utilities" icon="bolt" href="/apps/productivity">
+    Productivity boosters, system utilities, communication tools, and AI apps.
+  </Card>
+  <Card title="Security & Network" icon="shield" href="/apps/security-encryption">
+    Encryption, security tools, VPN, proxy clients, and remote desktop software.
+  </Card>
+  <Card title="Contributing" icon="github" href="/contributing">
+    Help improve the list by submitting new apps or corrections.
+  </Card>
+</CardGroup>

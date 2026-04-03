@@ -1,0 +1,92 @@
+---
+title: Package managers
+description: Package managers and GUI frontends for installing and managing software on macOS.
+---
+
+Package managers let you install, update, and remove software from the command line. macOS does not ship with a package manager, so you need to install one separately.
+
+<Tip>
+  Homebrew is by far the most popular package manager for macOS. Start there unless you have a specific reason to use MacPorts.
+</Tip>
+
+## Homebrew
+
+**[Homebrew](https://brew.sh/)** — The missing package manager for macOS. Open source and free.
+
+Homebrew installs packages into `/opt/homebrew` (Apple Silicon) or `/usr/local` (Intel) and symlinks them into `/usr/local/bin` so they are available on your `PATH`.
+
+### Installing Homebrew
+
+<Steps>
+  <Step title="Open Terminal">
+    Open **Terminal** (in `/Applications/Utilities/`) or any terminal emulator you prefer.
+  </Step>
+  <Step title="Run the install script">
+    Paste the following command and press **Return**:
+
+    ```bash
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+
+    The script will explain what it will do and ask for your confirmation before proceeding.
+  </Step>
+  <Step title="Follow the post-install steps">
+    On Apple Silicon Macs, Homebrew will print instructions to add itself to your `PATH`. Run the commands it provides, for example:
+
+    ```bash
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    ```
+  </Step>
+</Steps>
+
+### Basic Homebrew usage
+
+| Task | Command |
+|------|---------|
+| Install a package | `brew install <package>` |
+| Install a GUI app (cask) | `brew install --cask <app>` |
+| Search for a package | `brew search <query>` |
+| Get info about a package | `brew info <package>` |
+| Update Homebrew itself | `brew update` |
+| Upgrade all installed packages | `brew upgrade` |
+| Remove a package | `brew uninstall <package>` |
+| List installed packages | `brew list` |
+| Check for problems | `brew doctor` |
+
+<Tip>
+  Most macOS open source tools you find referenced online can be installed with `brew install <name>`. GUI apps available as casks can be installed with `brew install --cask <name>`.
+</Tip>
+
+## MacPorts
+
+**[MacPorts](https://www.macports.org/)** — Open-source community initiative to design an easy-to-use system for compiling, installing, and upgrading command-line, X11, or Aqua-based open-source software on macOS. Free and open source.
+
+MacPorts uses a `port` command and manages its own dependency tree independently from Homebrew. It is an alternative if you need software not available in Homebrew, or if you need a specific build configuration.
+
+```bash
+# Install a port
+sudo port install <portname>
+
+# Search for a port
+port search <query>
+
+# Update MacPorts and all installed ports
+sudo port selfupdate && sudo port upgrade outdated
+```
+
+## GUI frontends for Homebrew
+
+If you prefer a graphical interface over the command line, these apps wrap Homebrew's functionality in a native macOS UI.
+
+### Applite
+
+**[Applite](https://aerolite.dev/applite)** — User-friendly GUI app for Homebrew Casks. Install, update, and uninstall apps with a single click. Free and open source.
+
+### Cork
+
+**[Cork](https://corkmac.app)** — An intuitive and complete Homebrew GUI written in SwiftUI that supports all Homebrew features. Open source.
+
+## MacUpdate Desktop
+
+**[MacUpdate Desktop](https://www.macupdate.com/)** — Simplifies finding, buying, and installing apps for your Mac. Tracks updates across apps installed from multiple sources.

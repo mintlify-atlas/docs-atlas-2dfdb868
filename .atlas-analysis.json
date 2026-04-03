@@ -1,23 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "name": "Awesome Mac",
+  "projectType": "general",
+  "projectName": "Awesome Mac",
+  "projectDescription": "A curated collection of high-quality macOS applications and tools, systematically organized by category for easy discovery and use.",
   "theme": "almond",
-  "colors": {
-    "primary": "#0071E3",
-    "light": "#E8F2FF",
-    "dark": "#003D82"
-  },
-  "navbar": {
-    "primary": {
-      "type": "github",
-      "href": "https://github.com/jaywcjlove/awesome-mac"
-    }
-  },
-  "footer": {
-    "socials": {
-      "github": "https://github.com/jaywcjlove/awesome-mac"
-    }
-  },
+  "primaryColor": "#0071E3",
+  "lightColor": "#E8F2FF",
+  "darkColor": "#003D82",
   "navigation": {
     "tabs": [
       {
@@ -95,5 +83,24 @@
         ]
       }
     ]
-  }
+  },
+  "keyFeatures": [
+    "100K+ stars curated list of macOS applications",
+    "Organized into 30+ categories covering all types of Mac software",
+    "Includes free, open-source, and paid app options with clear labeling",
+    "Available as a JSON data package on npm for programmatic use",
+    "Multilingual support (English, Chinese, Japanese, Korean)",
+    "Regular community contributions and updates",
+    "Covers developer tools, productivity, design, utilities, and more",
+    "Separate lists for command-line apps and editor plugins"
+  ],
+  "publicApiSurface": [
+    "npm package: awesome-mac (dist/awesome-mac.json)",
+    "npm package export: awesome-mac/ko (Korean)",
+    "npm package export: awesome-mac/ja (Japanese)",
+    "npm package export: awesome-mac/zh (Chinese)",
+    "README.md - Main English curated list",
+    "command-line-apps.md - Curated command line tools",
+    "editor-plugin.md - Editor plugins reference"
+  ]
 }

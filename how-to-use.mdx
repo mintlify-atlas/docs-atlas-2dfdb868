@@ -1,0 +1,62 @@
+---
+title: "How to use"
+description: "Learn how to navigate the app list, understand labels, and use the npm data package."
+---
+
+## Navigating the list
+
+Awesome Mac organizes software into categories — such as Developer Tools, Reading & Writing, and Productivity & Utilities — so you can browse by the type of app you need. Use the sidebar to jump directly to any category.
+
+Within each category, apps are listed alphabetically. Each entry includes the app name, a short description, and one or more label icons that indicate key attributes of the app.
+
+## Label legend
+
+Each app in the list may display one or more of the following labels:
+
+<AccordionGroup>
+  <Accordion title="Open Source Software">
+    The app's source code is publicly available. Clicking the icon takes you directly to the app's source repository so you can inspect the code, file issues, or contribute.
+  </Accordion>
+  <Accordion title="Freeware">
+    The app is free to use, or offers a free personal license. You can use it at no cost.
+  </Accordion>
+  <Accordion title="App Store">
+    The app is available through the Mac App Store. Clicking the icon opens its App Store listing.
+  </Accordion>
+  <Accordion title="Native App">
+    The app is built natively for macOS — not an Electron wrapper or cross-platform port — which typically means better performance and tighter system integration.
+  </Accordion>
+  <Accordion title="Awesome List">
+    The icon links to a corresponding Awesome list for that app or ecosystem, where you can find additional curated resources such as plugins, extensions, or tools.
+  </Accordion>
+</AccordionGroup>
+
+## Using the npm data package
+
+The complete app list is available as a JSON data package on npm. This is useful if you want to build tools, search interfaces, or integrations on top of the Awesome Mac data.
+
+### Installation
+
+```bash
+npm install awesome-mac
+```
+
+### Importing the data
+
+```js
+// English list (default)
+import appList from 'awesome-mac'
+
+// Localized lists
+import zhList from 'awesome-mac/zh'
+import jaList from 'awesome-mac/ja'
+import koList from 'awesome-mac/ko'
+```
+
+Each import returns a JSON array of app entries parsed from the corresponding README.
+
+## A note on piracy
+
+<Note>
+  Awesome Mac refuses to support piracy. The list only includes genuine, legitimate software. If you come across websites offering pirated software or cracks, please report them on [GitHub issues](https://github.com/jaywcjlove/awesome-mac/issues/17). We love apps, but only authentic ones.
+</Note>
